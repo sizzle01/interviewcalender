@@ -2,11 +2,17 @@ import { makeStyles } from '@mui/styles'
 
 export const styles = makeStyles({
   sideMenu: {
-    width: '5vw',
+    width: '15vw',
     height: '100vh ',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+  },
+  logo: {
+    fontSize: '40px',
+    fontWeight: '700',
+    margin: '10px',
+    color: '#FF3333',
   },
 
   menuItems: {
@@ -31,6 +37,12 @@ export const styles = makeStyles({
     marginBottom: '20px',
     '&:hover': {
       color: '#FF3333',
+    },
+  },
+  // media queries
+  '@media (max-width: 800px)': {
+    calenderMenu: {
+      width: '50vw',
     },
   },
 })

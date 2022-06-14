@@ -6,7 +6,7 @@ import startOfWeek from 'date-fns/startOfWeek'
 import getDay from 'date-fns/getDay'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import React from 'react'
-
+import { events } from '../../Data'
 const locales = {
   'en-US': require('date-fns/locale/en-US'),
 }
@@ -17,27 +17,6 @@ const localizer = dateFnsLocalizer({
   getDay,
   locales,
 })
-
-const events = [
-  {
-    title: 'Grab Jobs Test',
-    allDay: true,
-    start: new Date(2022, 5, 2),
-    end: new Date(2022, 5, 2),
-  },
-  {
-    title: ' vacation',
-    allDay: true,
-    start: new Date(2022, 5, 20),
-    end: new Date(2022, 5, 20),
-  },
-  {
-    title: ' Grab jobs interview',
-    allDay: true,
-    start: new Date(2022, 5, 1),
-    end: new Date(2022, 5, 1),
-  },
-]
 
 const Schedule = () => {
   const classes = ScheduleStyles()

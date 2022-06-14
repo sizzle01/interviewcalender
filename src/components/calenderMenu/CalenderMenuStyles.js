@@ -21,7 +21,7 @@ export const CalenderMenuStyles = makeStyles({
     '&.MuiButton-root': {
       fontWeight: 600,
       color: '#121212',
-      backgroundColor: '#a454f0',
+      backgroundColor: '#d5b8ff',
       borderRadius: '20px',
       textTransform: 'lowercase',
     },
@@ -103,5 +103,12 @@ export const CalenderMenuStyles = makeStyles({
   personLabel: {
     marginRight: '7px',
     fontSize: '5px',
+  },
+
+  // Media queries
+  '@media (max-width: 800px)': {
+    calenderMenu: {
+      display: 'none',
+    },
   },
 })

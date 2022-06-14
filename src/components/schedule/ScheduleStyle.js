@@ -6,4 +6,11 @@ export const ScheduleStyles = makeStyles({
     width: '70vw',
     backgroundColor: '#Ffffff',
   },
+
+  //   Media queries
+  '@media (max-width: 800px)': {
+    calenderMenu: {
+      width: '90vw',
+    },
+  },
 })
