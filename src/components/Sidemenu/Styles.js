@@ -44,5 +44,8 @@ export const styles = makeStyles({
     calenderMenu: {
       width: '50vw',
     },
+    logo: {
+      marginLeft: '15px',
+    },
   },
 })
