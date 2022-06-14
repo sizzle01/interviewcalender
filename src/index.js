@@ -1,17 +1,50 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import App from './App'
+import {
+  createTheme,
+  ThemeProvider,
+  createMuiTheme,
+} from '@mui/material/styles'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+const theme = createMuiTheme({
+  status: {
+    danger: '#e53e3e',
+  },
+  palette: {
+    primary: {
+      main: '#0971f1',
+      darker: '#053e85',
+    },
+    neutral: {
+      main: '#64748B',
+      contrastText: '#fff',
+    },
+  },
+  typography: {
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+  },
+})
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ThemeProvider>
+  </React.StrictMode>,
+)
