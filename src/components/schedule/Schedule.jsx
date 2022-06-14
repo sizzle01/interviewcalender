@@ -5,9 +5,7 @@ import parse from 'date-fns/parse'
 import startOfWeek from 'date-fns/startOfWeek'
 import getDay from 'date-fns/getDay'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
-import React, { useState } from 'react'
-import DatePicker from 'react-datepicker'
-import { height } from '@mui/system'
+import React from 'react'
 
 const locales = {
   'en-US': require('date-fns/locale/en-US'),
@@ -42,13 +40,6 @@ const events = [
 ]
 
 const Schedule = () => {
-  const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' })
-  const [allEvents, setAllEvents] = useState(events)
-
-  function handleAddEvent() {
-    setNewEvent([...allEvents, newEvent])
-  }
-
   const classes = ScheduleStyles()
   return (
     <div className={classes.schedule}>
