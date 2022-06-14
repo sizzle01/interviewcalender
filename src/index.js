@@ -2,12 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
-import {
-  createTheme,
-  ThemeProvider,
-  createMuiTheme,
-} from '@mui/material/styles'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ThemeProvider, createMuiTheme } from '@mui/material/styles'
+import { BrowserRouter } from 'react-router-dom'
 const theme = createMuiTheme({
   status: {
     danger: '#e53e3e',

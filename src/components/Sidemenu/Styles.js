@@ -1,4 +1,3 @@
-import { colors } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 
 export const styles = makeStyles({
@@ -24,10 +23,6 @@ export const styles = makeStyles({
       borderLeft: '6px solid #FF3333',
       backgroundColor: '#FFE5E5',
     },
-  },
-  menuIcon: {
-    width: '100%',
-    marginBottom: '20px',
   },
   menuIcon: {
     color: '#5C5C5C',
